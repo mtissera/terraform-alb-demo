@@ -2,6 +2,8 @@
 
 This repo provides some Terraform code used to deploy an Appliacation Load Balancer on AWS, just for testing purposes. There are also 2 ECS instances (t2-micro) deployed with docker installed on both of them. On the first instance you'll have an nginx container and for the 2nd, an apache httpd image is used. 
 
+![ALB Demo Diagram](alb-demo.png?raw=true "ALB Demo Diagram")
+
 ## File Structure
 
 - **providers.tf**: provider configuration (AWS for this demo). You have to set up your own profile in the aws config file. Also, you might have to setup your IAM access keys in order to connect to the AWS API. I suggest to setup a IAM user (without password assignment, just an access key) and setup a proper permission policy. For the sake of this demo, i've created a user called "terraform" and attached a direct policy called "AdministratorAccess". I do not recommend do it this way, and **PLEASE BE CAREFUL: Do not share, by any means, your access keys.... never!**\
